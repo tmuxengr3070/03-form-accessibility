@@ -111,11 +111,13 @@ nav ul li a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #fafafa; /* Light background color instead of an image */
-  /* Adjusted padding to help fill the available space */
+  background-image: url('img/bg-image.jpg');
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: overlay;
+  background-color: rgba(0, 0, 0, 0.65); /* Dark overlay for contrast */
   padding: 16px;
   text-align: center;
-  color: #333;
   position: relative;
 }
 
@@ -127,13 +129,15 @@ nav ul li a:hover {
 }
 
 .hero-content h1 {
-  font-size: 40px;
+  font-size: 48px;
   margin-bottom: 16px;
+  color: #fff; /* Make h1 white for contrast */
 }
 
 .hero-content p {
   font-size: 18px;
   margin-bottom: 32px;
+  color: #fff; /* Make p white for contrast */
 }
 
 /* Reservation Card */
