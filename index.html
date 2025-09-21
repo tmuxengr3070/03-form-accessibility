@@ -40,38 +40,43 @@
         <div class="form-placeholder">
           <form>
             <div class="mb-3">
-              <input type="text" class="form-control" placeholder="Name">
+              <label for="name" class="form-label visually-hidden">Name</label>
+              <input type="text" id="name" class="form-control" placeholder="Name" autofocus> autocomplete="name" required>
             </div>
             <div class="mb-3">
-              <input type="email" class="form-control" placeholder="Email">
+              <label for="email" class="form-label visually-hidden">Email</label>
+              <input type="email" id="email" class="form-control" placeholder="Email" autocomplete="email" required>
             </div>
             <div class="mb-3">
-              <input type="text" class="form-control" placeholder="Zip">
+              <label for="zip" class="form-label visually-hidden">Zip Code</label>
+              <input type="text" id="zip" class="form-control" placeholder="Zip" autocomplete="postal-code" pattern="\d{5}" required>
             </div>
             <div class="mb-3">
-              <input type="number" class="form-control" placeholder="Party Size">
+              <label for="party-size" class="form-label visually-hidden">Party Size</label>
+              <input type="number" id="party-size" class="form-control" placeholder="Party Size" min="1" max="20" required>
             </div>
             <div class="mb-3">
-              <select class="form-select">
-                <option selected>Choose...</option>
+              <label for="spice-level" class="form-label visually-hidden">Preferred Spice Level</label>
+              <select class="form-select" id="spice-level" required>
+                <option value="" disabled selected>Choose...</option>
                 <option value="mild">Mild</option>
                 <option value="med">Medium</option>
                 <option value="spicy">Spicy</option>
               </select>
             </div>
             <div class="form-check mb-3">
-              <input class="form-check-input" type="checkbox">
-              <label class="form-check-label">
+              <input class="form-check-input" type="checkbox" id="birthday-cake">
+              <label class="form-check-label" for="birthday-cake">
                 Would you like to pretend it's your birthday for free cake?
               </label>
             </div>
             <div class="form-check mb-3">
-              <input class="form-check-input" type="checkbox">
-              <label class="form-check-label">
+              <input class="form-check-input" type="checkbox" id="accept-surprise" required>
+              <label class="form-check-label" for="accept-surprise">
                 I accept that I have no idea where I'll dine, and that's OK.
               </label>
             </div>
-            <a href="#" class="btn btn-lg btn-primary">Book My Mystery Meal!</a>
+            <button type="submit" class="btn btn-lg btn-primary" aria-label="Book My Mystery Meal!">Book My Mystery Meal!</button>
           </form>
         </div>
       </div>
